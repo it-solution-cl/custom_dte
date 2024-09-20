@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <template id="custom_invoice_dte_template" inherit_id="l10n_cl.invoice_dte_template">
+            <xpath expr="//MntNeto" position="replace">
+                <MntNeto t-if="amounts['amount_untaxed'] != 0" t-esc="float_rr(amounts['amount_untaxed'], ...)"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
